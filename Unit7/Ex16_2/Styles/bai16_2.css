@@ -1,0 +1,101 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+   
+}
+.header{
+    display: flex;
+    flex-direction: row;
+    background-color: red;
+}
+.logo{
+    width: 65%;
+    height: auto;
+    text-align: center;
+    line-height: 50px;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    background-color: red;
+    overflow: hidden;
+    width: 35%;
+}
+
+.menu {
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.menu li {
+    padding: 15px;
+    list-style: none;
+}
+
+.menu a {
+    text-decoration: none;
+    color: white;
+}
+
+.menu .submenu:hover .sub-menu {
+    display: block;
+}
+
+.sub-menu {
+    display: none;
+    position: absolute;
+    background-color: red;
+    margin-top: 10px;
+
+}
+
+.sub-menu li {
+    padding: 10px;
+}
+.menu i{
+    display: none;
+}
+.menu-icon {
+    display: none;
+    background-color: red;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+    .logo{
+        display: none;
+    }
+    .menu {
+        display: none;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    .menu.active {
+        display: block;
+        flex-direction: column;
+        transform: translateX(0.5); /* Menu xuất hiện từ trái qua */
+    }
+    
+    
+    .sub-menu {
+        display: none;
+        position: relative;
+        top: 100%; /* Đặt sub menu phía dưới */
+        left: 0; /* Đặt sub menu bên trái */
+        background-color:red;
+    }
+    .menu i{
+        display:  inline  ;
+    }
+}
